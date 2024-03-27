@@ -14,7 +14,7 @@
       <div class="container">
 			<div class="row justify-content-center">
 			<div class="col-sm-12 col-md-8">
-				<div class="col-sm-12 text-center">
+				<div class="col-sm-12 mb-3 text-center">
 					
 					
 					
@@ -25,12 +25,14 @@
 					<form  action="" method="POST">
 					<div class="row">
 					<div class="col-sm-6 mb-4">
+					    <h5>About Firm</h5>
 						<div class="form-check p-0">
 							<input type="text" class="form-control" id="formGroupExampleInput" name="firm_name" placeholder="Firm Name">
 						</label>
 						</div>
 					</div>
 						<div class="col-sm-6 mb-4">
+						       <h5>About Client</h5>
 						<div class="form-check p-0">
 						 <select name="sector_of_invest">
 							<option>Investment Sector</option>

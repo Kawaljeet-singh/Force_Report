@@ -23,6 +23,7 @@ class Dashboard extends CI_Controller {
 		$data['subscribers']=$this->Dashboard_model->getEmailSubscribers();
 		$data['all_data'] =$this->Dashboard_model->sell_form();
 		$data['green_light'] =$this->Dashboard_model->green_light();
+		$data['green_lights'] =$this->Dashboard_model->green_lights();
 		$data['opportunities'] =$this->Dashboard_model->opportunities($this->user_detail->user_id,'1');
 		$data['co_investor'] =$this->Dashboard_model->co_investor($this->user_detail->user_id);
 		if ($this->user_detail->user_type == 0)
@@ -84,7 +85,7 @@ class Dashboard extends CI_Controller {
             'recent_aq' => $recentAcquisitions,
             'competitiors' => $competitors,
             'invest_sector' => $investmentSector,
-            'inv_user_id' => $inv_user_id
+            'inve_user_id' => $inv_user_id
 			);
 			  $inserted = $this->Dashboard_model->save_sell_form($data);
 			 if ($inserted) {
@@ -99,21 +100,26 @@ class Dashboard extends CI_Controller {
 	public function contact_user()
 	{
 			$id=$this->input->post('userId');
-			$user=$this->Dashboard_model->get_user_detail($id);
+			$form_id=$this->input->post('formId');
+		 
+			$user=$this->Dashboard_model->get_user_detailbyid($id);
 			 
 			if ($user) {
 				$data = array('cont_sender'=> $this->user_detail->user_key,
 				'cont_reciver' => $user->user_key,
-				'cont_status' => 1);
+				'cont_status' => 1,
+				'cont_userid'=>$id,
+				'cont_form_id' => $form_id);
 				$inserted = $this->db->insert('contact_user', $data);
 				 if ($inserted) {
 					$response = array('success' => true, 'message' => 'Data inserted successfully');
 				} else {
 					$response = array('success' => false, 'message' => 'Failed to insert data');
 				}
-			} else {
-				return ''; 
-			}
+					header('Content-Type: application/json');
+			        echo json_encode($response);
+			}  
+		 
 	}
 	public function add_invest_sector()
 	{
@@ -230,40 +236,50 @@ class Dashboard extends CI_Controller {
 		$sp=$this->Dashboard_model->get_sell_side_detail($id);
 		$data['title'] = $sp->company_name;
 		$data['sp']=$sp;
-		$data['user']=getInvestorName($sp->inv_user_id);
+		$data['user']=getInvestorName($sp->inve_user_id);
 		$this->load->view('view_sell_side', $data);
 	}
 	
-	
-	public function sendEmails() {
-    // Load necessary libraries for sending emails (e.g., Email library)
-   
-    // Get all subscribers from the database
-    $this->load->model('EmailModel');
-    $subscribers = $this->Dashboard_model->getAllSubscribers();
+	 public function export_list() {
+        // Get data from your model
+        $data = $this->Dashboard_model->getEmailSubscribers();
+        // Load the CSV helper
+        
+        // Define CSV file name
+       $filename = 'items_export_' . date('Y-m-d_H-i-s') . '.csv';
+        
+        // Set headers
+        header('Content-Type: text/csv');
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
+        
+        // Create a file pointer connected to the output stream
+        $output = fopen('php://output', 'w');
+        
+        // Add CSV header
+        $header = array('ID', 'Email');
+        fputcsv($output, $header);
+        
+        // Add data rows
+        foreach ($data as $row) {
+            $rowData = array($row->sub_id, $row->email);
+            fputcsv($output, $rowData);
+        }
+        
+        fclose($output);
+    }
 
+	public function sendEmails() {
+   
+    $subscribers = $this->Dashboard_model->getEmailSubscribers();
+    $title=$this->input->post('title');
+    $msg=$this->input->post('message');
     foreach ($subscribers as $subscriber) {
       // Customize your email content and settings
-      $subject = 'Your Subject';
-      $message = 'Hello ' . $subscriber->name . ',<br><br>Your email content goes here.';
-      
-      // Set the email parameters
-      $this->email->from('your-email@example.com', 'Your Name');
-      $this->email->to($subscriber->email);
-      $this->email->subject($subject);
-      $this->email->message($message);
-
-      // Send the email
-      if ($this->email->send()) {
-        echo 'Email sent to: ' . $subscriber->email . '<br>';
-      } else {
-        echo 'Error sending email to: ' . $subscriber->email . '<br>';
-        echo 'Error: ' . $this->email->print_debugger() . '<br>';
-      }
-
-      // Clear email data for the next iteration
-      $this->email->clear();
+      $subject = $title;
+      $message = 'Hello ' . $subscriber->email . ',' .$msg;
+     client_email("Force-user",$subscriber->email,$message,$subject);
     }
+     redirect('dashboard');
   }
 	
 	

@@ -1,0 +1,1 @@
+[12-Mar-2024 00:02:04 America/Chicago] PHP Fatal error:  Attribute "AllowDynamicProperties" cannot target function (allowed targets: class) in /home1/sunman74/DESIGNBYSUNMAN.COM/Force_Report/system/database/DB.php on line 53

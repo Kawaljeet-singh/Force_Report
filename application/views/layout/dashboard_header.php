@@ -81,7 +81,7 @@
 			<li class="nav-item <?php if($page == 'sell_side_registed'){echo 'active';}?>">
                 <a class="nav-link collapsed" href="<?php echo base_url('sell_side_registed');?>" >
                    
-                    <span>Registered Sell Sides</span>
+                    <span>Registered Sell Side</span>
                 </a>
             </li>
 
@@ -97,26 +97,26 @@
 			<li class="nav-item <?php if($page == 'approved_investment'){echo 'active';}?>">
                 <a class="nav-link collapsed" href="<?php echo base_url('approved_investment');?>">
                    
-                    <span>Approved investments</span>
+                    <span>Approved Investments</span>
                 </a>
             </li>
 			<li class="nav-item <?php if($page == 'manage_investment_sector'){echo 'active';}?>">
                 <a class="nav-link collapsed" href="<?php echo base_url('manage_investment_sector');?>" >
                    
-                    <span>Manage investment sectors</span>
+                    <span>Manage Investment Sectors</span>
                 </a>
             </li>
 			<li class="nav-item <?php if($page == 'manage_investment_structure'){echo 'active';}?>">
                 <a class="nav-link collapsed" href="<?php echo base_url('manage_investment_structure');?>" >
                    
-                    <span>Manage investment structures</span>
+                    <span>Manage Investment Structures</span>
                 </a>
             </li>
 			
 			<li class="nav-item <?php if($page == 'manage_investment_stage'){echo 'active';}?>">
                 <a class="nav-link collapsed" href="<?php echo base_url('manage_investment_stage');?>">
                    
-                    <span>Manage investment stages</span>
+                    <span>Manage Investment Stages</span>
                 </a>
             </li>
 			
@@ -164,18 +164,7 @@
 								
 							</div>
                     <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                     
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">

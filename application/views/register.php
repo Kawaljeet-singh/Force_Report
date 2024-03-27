@@ -69,50 +69,57 @@
                           
                            <div class="col-sm-6 col-md-3 mb-4">
                               <div class="form-check p-0">
-                                 <select name="country" class="countries form-control" id="countryId">
+                                 <select name="country" class="countries " id="countryId">
 									<option value="">Select Country</option>
 								</select>
                               </div>
                            </div>
                            <div class="col-sm-6 col-md-3 mb-4">
                               <div class="form-check p-0">
-                                <select name="state" class="states form-control" id="stateId">
+                                <select name="state" class="states " id="stateId">
 									<option value="">Select State</option>
 								</select>
                               </div>
                            </div>
                            <div class="col-sm-6 col-md-3 mb-4">
                               <div class="form-check p-0">
-								<select name="city" class="cities form-control" id="cityId">
+								<select name="city" class="cities" id="cityId">
 									<option value="">Select City</option>
 								</select>                                 
 								 </div>
                            </div>
                             <div class="col-sm-6 col-md-3 mb-4">
                               <div class="form-check p-0">
-                                 <select class="form-control" name="sf">
+                                 <select  name="sf">
                                     <option value="917ddb65-f8ad-11ed-9f7d-3c7c3f5b04d2">SFO</option>
-                                    <option value="a2ee0619-f8ad-11ed-9f7d-3c7c3f5b04d2">MFO</option>
+                                    <option value="a2e13801-f8ad-11ed-9f7d-3c7c3f5b04d2">MFO</option>
                                  </select>
                               </div>
                            </div>
+                           
                            <div class="col-sm-6 mb-4">
+                               <div class="input-group mb-3">
+                                  <span class="input-group-text dd">$</span>
+                                 <input type="text" class="form-control dd"  name="amount" placeholder="Total Investment Amount">
+                                </div>
                               <div class="form-check p-0">
-                                 <input type="text" class="form-control"  name="amount" placeholder="Amount of Investment">
+                                 
                               </div>
                            </div>
-                            <div class="col-sm-6 mb-4">
+                           <div class="col-sm-6 mb-4">
+                               
                               <div class="form-check p-0">
-                               <input type="text" class="form-control"  name="sizeby" placeholder="Size of Investment">
+                                  <input type="text" class="form-control"  name="sizeby" placeholder="Number of Investment">
                               </div>
                            </div>
+                           
                              <div class="col-sm-12 col-md-12 py-2">
                                  <input class="check" type="checkbox" name="anonymous" value="1" >
                                  <label>I want my information to stay anonymous</label>
                               </div>
                            <div class="col-lg-12">
                               <div class="col-sm-12 text-center my-5">
-                                 <h1 style="color:#55AB33;">Investment Sector</h1>d
+                                 <h1 style="color:#55AB33;">Investment Sector</h1>
                               </div>
                            </div>
                            <?php foreach ($invest_sector as $inv)
@@ -148,19 +155,19 @@
                            </div>
                           
                            <?php }?>
-                                <div class="row justify-content-center">
+                                <div class="col-12">
                                     <input type="hidden" name="register_type" value="1">
                                      <div class="col-sm-12 mb-4 text-center">
                                         <div class="message"></div>
                                         <input type="submit"  value="Submit" class="view-chat-btn">
                                      </div>
-                                      <div class="col-sm-12 text-center">
+                                      <div class="col-sm-12 text-center d-none">
                                      <img class="img-fluid" src="<?php echo base_url()?>/assets/img/company.png">
                                   </div>
                                   </div>
                                  
-                        </div>
-                        </form>
+                        
+                        </form></div>
                         <form method="POST" name="sell_side" action="">
                         <div class="row d-none" id="sector-2">
                             <div class="col-sm-6 mb-4">
@@ -185,7 +192,7 @@
                            </div>
                            <div class="col-sm-6 mb-4">
                               <div class="form-check p-0">
-                                 <input type="text" class="form-control"  name="family_office" placeholder="Family Office">
+                                 <input type="text" class="form-control"  name="family_office" placeholder="Position in Firm">
                               </div>
                            </div>
                            <div class="col-sm-6 mb-4">
@@ -195,7 +202,7 @@
                            </div>
                            <div class="col-sm-6 mb-4">
                               <div class="form-check p-0">
-                                 <input type="password" class="form-control" id="password"  name="password" placeholder="Password*">
+                                 <input type="password" class="form-control" id="spassword"  name="password" placeholder="Password*">
                               </div>
                            </div>
 						   <div class="col-sm-6 mb-4">
@@ -204,64 +211,55 @@
                               </div>
                            </div>
                           
-                           <div class="col-sm-6 col-md-3 mb-4">
+                           <div class="col-sm-6 col-md-4 mb-4">
                               <div class="form-check p-0">
-                                 <select name="country" class="countries form-control" id="countryId">
+                                 <select name="country" class="countries " id="countryId">
 									<option value="">Select Country</option>
 								</select>
                               </div>
                            </div>
-                           <div class="col-sm-6 col-md-3 mb-4">
+                           <div class="col-sm-6 col-md-4 mb-4">
                               <div class="form-check p-0">
-                                <select name="state" class="states form-control" id="stateId">
+                                <select name="state" class="states" id="stateId">
 									<option value="">Select State</option>
 								</select>
                               </div>
                            </div>
-                           <div class="col-sm-6 col-md-3 mb-4">
+                           <div class="col-sm-6 col-md-4 mb-4">
                               <div class="form-check p-0">
-								<select name="city" class="cities form-control" id="cityId">
+								<select name="city" class="cities " id="cityId">
 									<option value="">Select City</option>
 								</select>                                 
 								 </div>
                            </div>
-                            <div class="col-sm-6 col-md-3 mb-4">
-                              <div class="form-check p-0">
-                                 <select class="form-control" name="sf">
-                                    <option value="917ddb65-f8ad-11ed-9f7d-3c7c3f5b04d2">SFO</option>
-                                    <option value="a2ee0619-f8ad-11ed-9f7d-3c7c3f5b04d2">MFO</option>
-                                 </select>
-                              </div>
-                           </div>
-                           <div class="col-sm-6 mb-4">
-                              <div class="form-check p-0">
-                                 <input type="text" class="form-control"  name="amount" placeholder="Amount of Investment">
-                              </div>
-                           </div>
-                            <div class="col-sm-6 mb-4">
-                              <div class="form-check p-0">
-                               <input type="text" class="form-control"  name="sizeby" placeholder="Size of Investment">
-                              </div>
-                           </div>
-                            <div class="row justify-content-center">
+                             
+                            
+                             <div class="col-12  ">
                                 <input type="hidden" name="register_type" value="2">
                                      <div class="col-sm-12 mb-4 text-center">
                                         <div class="message"></div>
                                         <input type="submit"  value="Submit" class="view-chat-btn">
                                      </div>
-                                      <div class="col-sm-12 text-center">
+                                      <div class="col-sm-12 text-center d-none">
                                      <img class="img-fluid" src="<?php echo base_url()?>/assets/img/company.png">
                                   </div>
                                   </div>
                                  
-                                  <div class="col-sm-12 col-md-12 py-2">
-                                 <input class="check" type="checkbox" name="anonymous" value="1" >
-                                 <label>I want my information to stay anonymous</label>
-                              </div> 
+                                  
                         </div>
                         </form>
                         <form method="POST" name="service_provider" action="">
                         <div class="row d-none" id="sector-3">
+                            <div class="col-sm-6 mb-4">
+                              <div class="form-check p-0">
+                                 <input type="text" class="form-control" id="f_name" name="f_name" placeholder="First Name">
+                              </div> 
+                           </div>
+                           <div class="col-sm-6 mb-4">
+                              <div class="form-check p-0">
+                                 <input type="text" class="form-control"  name="l_name" placeholder="Last Name">
+                              </div>
+                           </div>
                            <div class="col-sm-6 mb-4">
                               <div class="form-check p-0">
                                  <input type="text" class="form-control"  name="email" placeholder="User Email*">
@@ -274,7 +272,7 @@
                            </div>
                             <div class="col-sm-6 mb-4">
                               <div class="form-check p-0">
-                                 <input type="password" class="form-control" id="password"  name="password" placeholder="Password*">
+                                 <input type="password" class="form-control" id="ppassword"  name="password" placeholder="Password*">
                               </div>
                            </div>
                              
@@ -289,19 +287,15 @@
                                  <input type="text" class="form-control"  name="firm_name" placeholder="Firm Name">
                               </div>
                            </div>
-                         <div class="col-sm-6 mb-4">
-                              <div class="form-check p-0">
-                                 <input type="text" class="form-control"  name="amount" placeholder="Number of Investment">
-                              </div>
-                           </div>
+                          
                              <div class="col-sm-6 mb-4">
                                  <div class="form-check p-0">
-                                    <textarea  name="firm_descriptions"  placeholder="Firm Description"></textarea>
+                                    <input type="text" class="form-control"  name="firm_descriptions"  placeholder="Position in firm" />
                                 </div>
                               </div>
                                          <div class="col-sm-6 mb-4">
                                  <div class="form-check p-0">
-                                    <select class="form-control" name="sector_of_invests">
+                                    <select name="sector_of_invests">
                                        <option>Investment Sector</option>
                                        <?php foreach ($invest_sector as $inv)
                                           {
@@ -313,48 +307,48 @@
                                  </div>
                               </div>
                           
-                               <div class="col-sm-4 mb-4">
+                               <div class="col-sm-6 mb-4">
                               <div class="form-check p-0">
-                                 <select name="country" class="countries form-control" id="countryId">
+                                 <select name="country" class="countries " id="countryId">
 									<option value="">Select Country</option>
 								</select>
                               </div>
                            </div>
-                           <div class="col-sm-4 mb-4">
+                           <div class="col-sm-6 mb-4">
                               <div class="form-check p-0">
-                                <select name="state" class="states form-control" id="stateId">
+                                <select name="state" class="states " id="stateId">
 									<option value="">Select State</option>
 								</select>
                               </div>
                            </div>
-                           <div class="col-sm-4 mb-4">
+                           <div class="col-sm-6 mb-4">
                               <div class="form-check p-0">
-								<select name="city" class="cities form-control" id="cityId">
+								<select name="city" class="cities " id="cityId">
 									<option value="">Select City</option>
 								</select>                                 
 								 </div>
                            </div>
-                            <div class="col-sm-12 col-md-12 py-2">
-                                 <input class="check" type="checkbox" name="anonymous" value="1" >
-                                 <label>I want my information to stay anonymous</label>
-                              </div>
+                           
                              <div class="col-sm-6 mb-4">
                                  <div class="form-check p-0">
-                                    <select class="form-control" name="category">
+                                    <select  name="category">
                                        <option>Category</option>
                                        <?php foreach ($category as $inv)
                                           {
+                                               $pageTitleWithoutTop = str_replace('Top', '', $inv->page_title);
                                           ?>
-                                       <option value="<?php echo $inv->uuid;?>"><?php echo $inv->page_title;?></option>
+                                       <option value="<?php echo $inv->uuid;?>"><?php echo $pageTitleWithoutTop;?></option>
                                        <?php }?>
                                     </select>
                               </div>
                               </div>
                          
-                           
+                            <div class="col-sm-12 col-md-12 py-2">
+                                 <p>Optional Information About Your Client(s)</p>
+                              </div>
                               <div class="col-sm-6 mb-4">
                                  <div class="form-check p-0">
-                                    <select class="form-control" name="invest_structures">
+                                    <select  name="invest_structures">
                                        <option>Structure of Investment</option>
                                        <?php foreach ($invest_structure as $inv)
                                           {
@@ -368,15 +362,15 @@
                            
                             <div class="col-sm-6 mb-4">
                               <div class="form-check p-0">
-                               <input type="text" class="form-control"  name="sizeby" placeholder="Size of Investment">
+                               <input type="text" class="form-control"  name="sizeby" placeholder="Number of Investment">
                               </div>
                            </div>
                           
                           
                               <div class="col-sm-6 mb-4">
                                  <div class="form-check p-0">
-                                    <select class="form-control" name="invest_stages">
-                                       <option>Stage of investment</option>
+                                    <select   name="invest_stages">
+                                       <option>Stage of Investment</option>
                                        <?php foreach ($invest_stage as $inv)
                                           {
                                           ?>
@@ -386,20 +380,20 @@
                                  </div>
                               </div>
                            
-                               <div class="row justify-content-center">
+                               <div class="col-12  ">
                                    <input type="hidden" name="register_type" value="3">
                                      <div class="col-sm-12 mb-4 text-center">
                                         <div class="message"></div>
                                         <input type="submit"  value="Submit" class="view-chat-btn">
                                         
                                      </div>
-                                      <div class="col-sm-12  text-center">
+                                      <div class="col-sm-12  text-center d-none">
                                      <img class="img-fluid" src="<?php echo base_url()?>/assets/img/company.png">
                                   </div>
                                   </div>
-                                 </form>
+                                
                             </div>
-                        
+                         </form>
                      </div>
                   </div>
                  
@@ -475,26 +469,24 @@ $(function() {
     },
     // Specify validation error messages
     messages: {
-      f_name: "First Name can't be blank",
-      l_name: "Last Name can't be blank",
-      email: "Please enter a valid email address",
+      f_name: "Required Field",
+      l_name: "Required Field",
+      email: "Required Field",
       phone: {
-        required: "Phone number can't be blank",
-        digits: "Please enter only digits",
-        minlength: "Phone number must be exactly 10 digits",
-        maxlength: "Phone number must be exactly 10 digits"
+        required: "Required Field",
+       
       },
       password: {
-        required: "Please provide a password",
+        required: "Required Field",
         minlength: "Password must be at least 6 characters long"
       },
       confirm_password: {
-        required: "Please provide a password",
+        required: "Required Field",
         minlength: "Password must be at least 6 characters long",
         equalTo: "Passwords do not match"
       },
       amount: {
-        required: "Amount can't be blank",
+        required: "Required Field",
         digits: "Please enter only digits"
       },
       sizeby: {
@@ -564,7 +556,7 @@ $(function() {
       confirm_password: {
         required: true,
         minlength: 6,
-        equalTo: "#password"
+        equalTo: "#spassword"
       },
       amount: {
         required: true,
@@ -577,26 +569,24 @@ $(function() {
     },
     // Specify validation error messages
     messages: {
-      f_name: "First Name can't be blank",
-      l_name: "Last Name can't be blank",
-      email: "Please enter a valid email address",
+      f_name: "Required Field",
+      l_name: "Required Field",
+      email: "Required Field",
       phone: {
-        required: "Phone number can't be blank",
-        digits: "Please enter only digits",
-        minlength: "Phone number must be exactly 10 digits",
-        maxlength: "Phone number must be exactly 10 digits"
+        required: "Required Field",
+        
       },
       password: {
-        required: "Please provide a password",
+        required: "Required Field",
         minlength: "Password must be at least 6 characters long"
       },
       confirm_password: {
-        required: "Please provide a password",
+        required: "Required Field",
         minlength: "Password must be at least 6 characters long",
         equalTo: "Passwords do not match"
       },
       amount: {
-        required: "Amount can't be blank",
+        required: "Required Field",
         digits: "Please enter only digits"
       },
       sizeby: {
@@ -643,6 +633,8 @@ $(function() {
   $("form[name='service_provider']").validate({
     // Specify validation rules
     rules: {
+         f_name: "required",
+      l_name: "required",
       email: {
         required: true,
         email: true
@@ -661,7 +653,7 @@ $(function() {
       confirm_password: {
         required: true,
         minlength: 6,
-        equalTo: "#password"
+        equalTo: "#ppassword"
       },
 	  amount: {
         required: true,
@@ -677,24 +669,26 @@ $(function() {
     },
     // Specify validation error messages
     messages: {
-      email: "Please enter a valid email address",
+         f_name: "Required Field",
+      l_name: "Required Field",
+      email: "Required Field",
        phone: {
-        required: "Phone number can't be blank",
+        required: "Required Field",
         digits: "Please enter only digits",
          minlength: "Phone number must be exactly 10 digits",
         maxlength: "Phone number must be exactly 10 digits"
       },
       password: {
-        required: "Please provide a password",
+        required: "Required Field",
         minlength: "Password must be at least 6 characters long"
       },
       confirm_password: {
-        required: "Please provide a password",
+        required: "Required Field",
         minlength: "Password must be at least 6 characters long",
         equalTo: "Password do not match"
       },
 	   amount: {
-        required: "Amount can't be blank",
+        required: "Required Field",
         digits: "Please enter only digits"
       },
         sizeby: {

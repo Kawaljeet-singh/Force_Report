@@ -26,6 +26,7 @@
     --green: #5BB958;
     --table: #383737;
 	--pink: #E9288A;
+	--purple: #880D43;
 }
 body {
   font-family: helvetica;
@@ -59,7 +60,10 @@ a:hover {
   margin-bottom:10px;
   width: 100%;
 }
-
+                           .dd, .dd:focus{background: #1C1919;
+  border-radius: 0;
+  padding: 15px 20px;
+  color: var(--white);}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -200,6 +204,7 @@ a:hover {
 
 #header.header-scrolled {
   top: 0;
+  position:sticky;
 }
 
 #header .logo {
@@ -217,6 +222,452 @@ a:hover {
 }
 
 
+
+@media screen and (max-width: 767px) {
+    	#member {background-color:#1C1919;}
+#member h2 {font-size:28px;color:#1FB8EF;font-weight:bold;font-family: "helvetica_medium", Arial, sans-serif;}
+#member h5 {font-size:18px;font-family: helvetica}
+#member p {font-size:14px;font-family: helvetica}
+    #about{
+ 	background-color:#272A31;
+	 
+	}
+	#about h1{font-size:30px;font-weight:bold;color:#1FB8EF;font-family: helvetica_bold;}
+	#about h3 {font-size:30px;color:var(--green);font-family: "helvetica_medium", Arial, sans-serif;}
+	#about p {font-size:14px;font-family: helvetica }
+    .margin-top{height:100vh;}
+    .content-second {
+    border-top: 2px dotted #707070;
+    border-bottom: 2px dotted #707070;
+	border-left: 0;
+  border-right: 0;
+  }
+    .f2f-btn
+{
+ background: var(--purple);
+  color: var(--white);
+  transition: 0.3s; 
+    text-align:center;
+  border-radius: 30px;
+  font-family: "helvetica_medium", Arial, sans-serif;
+ font-size: 14px;
+   margin-right:25px;
+ padding:6px 20px;
+  display:inline-block;
+  border:1px solid var(--purple);
+   text-align:center;
+    
+}
+.f2f-btn:hover
+{
+  background-color:var(--white);
+  color:var(--purple);
+  border:1px solid var(--purple);
+  transition:0.5s;
+}
+  .submit-invest-btn
+{
+ background: var(--blue);
+  color: var(--white);
+  transition: 0.3s; 
+    text-align:center;
+  border-radius: 30px;
+  font-family: "helvetica_medium", Arial, sans-serif;
+ font-size: 14px;
+   
+ padding:6px 20px;
+  display:inline-block;
+  border:1px solid var(--blue);
+   text-align:center;
+    
+}
+.W-100{width:100%;}
+.submit-invest-btn:hover
+{
+  background-color:var(--white);
+  color:var(--blue);
+  border:1px solid var(--blue);
+  transition:0.5s;
+}
+
+/**
+* Appointment Button *
+*/
+.appointment-btn {
+  background: var(--green);
+  color: var(--white);
+  transition: 0.3s; 
+    text-align:center;
+  border-radius: 30px;
+  font-family: "helvetica_medium", Arial, sans-serif;
+ font-size: 14px;
+  width:100%;
+ padding:6px 20px;
+  display:inline-block;
+  border:1px solid var(--green);
+   text-align:center;
+}
+
+.appointment-btn:hover {
+  background: var(--white);
+  transition:0.5s;
+  color: var(--green);
+   border:1px solid var(--green);
+    
+}
+ 
+.view-chat-btn {
+	background-color: var(--green); 
+	color: white;
+	padding:6px 20px;
+ 	border-radius: 50px; 
+	transition: all ease-in-out 0.4s;
+	font-family: "helvetica_medium", Arial, sans-serif;;
+	border:1px solid var(--green);
+	display:inline-block;
+	width:100%;
+	font-size: 14px;
+    text-align:center;
+}
+	
+    .view-chat-btn:hover {
+	border:1px solid var(--green);
+	background-color: var(--white);
+	color:var(--green);
+	transition: all ease-in-out 0.4s;
+ 	font-family: "helvetica_medium", Arial, sans-serif;;
+ }
+#hero .learn-btn
+{
+  font-family: "helvetica_medium", Arial, sans-serif;;
+  border-radius: 50px;
+  color:var(--white);
+  padding: 6px 30px;
+  font-size: 18px;
+  background-color: #1FB8EF;
+}
+#hero .learn-btn:hover
+{
+  font-family: "helvetica_medium", Arial, sans-serif;;
+  border-radius: 50px;
+  color:#1FB8EF;
+  background-color: var(--white);
+  transition: 0.5s;
+}
+
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about-us{background-color: #1D1919;color: var(--white);}
+.about-us .content {
+  padding: 30px;
+   border-radius: 4px;
+  color: var(--white);
+}
+h3{font-size:20px;}
+.about-us .content h1 {
+ 
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: helvetica;
+}
+.about-us .content h1 > span
+{
+ font-family: helvetica_bold; 
+   font-weight: 700;
+}
+.about-us .content p {
+  font-size: 12px;
+  margin-bottom: 30px;
+  font-family: helvetica;
+}
+.about-us .content .service-icon {
+   margin-bottom: 30px;
+   width: 75px;
+   text-align: center;
+   
+}
+.about-us .content .content-1
+ {
+  font-family: helvetica_bold;
+  color:#E9288A
+ }
+ .about-us .content .content-2
+ {
+  font-family: helvetica_bold;
+  color:#FC9A0A
+ }
+
+/*--------------------------------------------------------------
+# Family office
+--------------------------------------------------------------*/
+.family-office
+{
+  background-color: #0D0C0C;
+}
+.family-office-nav-tab
+{
+width: 100%;
+}
+.family-office-nav-tab .nav-tab
+{
+width: 100%;
+border:none;
+background-color:#2A2F35;
+border-radius: 0%;
+padding: 10px 0 10px 0;
+color: var(--white) !important;
+border:1px solid #48515D;
+border-bottom: none;
+text-align: left;
+font-size:12px; 
+padding: 20px 30px !important;
+font-family: helvetica_bold;
+}
+.family-office-nav-tab .active {
+  background-color:  #48515D;
+ 
+}
+.family-office h1 {color: white;font-size: 20px;font-weight: 700; font-family: helvetica;}
+
+.family-office h1 span {color:var(--green); font-family: helvetica_bold;}
+/* Styling for the data-table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+	 color: var(--white);
+ border:1px solid #48515D;padding: 20px 30px !important;
+ font-size:8px;
+}
+
+.data-table th {
+  background-color: #48515D;
+  font-size:12px;
+}
+
+/* Styling for the dashboard-table */
+.dashboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing:0 4px;
+ 
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 10px;
+  text-align: center;
+  color:var(--white);
+}
+
+
+.dashboard-table th {
+  background: #231F20;
+  color:var(--white);
+  border:none;
+}
+
+.dashboard-table td {
+ background: #161515;
+  color:var(--white);
+   border:none;
+}
+
+.pagination
+{
+	background-color:var(--black);
+}
+
+
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+/*--------------------------------------------------------------
+# family meet
+--------------------------------------------------------------*/
+.family-meet .content h1 > span
+{
+ font-family: helvetica_bold; 
+color:var(--blue);
+    
+}
+.family-meet .content p {
+  font-size: 12px;
+  font-family: helvetica;
+}
+
+/*--------------------------------------------------------------
+#  Service Provider
+--------------------------------------------------------------*/
+.service-provider
+{
+  background-color: #0D0C0C;
+}
+.service-provider-nav-tab
+{
+width: 100%;
+text-transform:uppercase;
+}
+.service-provider-nav-tab .nav-tab
+{
+  font-family: helvetica_bold;
+  text-transform: uppercase;
+  font-size: 12px;
+width: 100%;
+border:none;
+background-color:#2A2F35;
+border-radius: 0%;
+padding: 10px 0 10px 0;
+color: var(--white) !important;
+border:1px solid #48515D;
+border-bottom: none;
+text-align: left;
+padding: 20px 30px !important;
+}
+.service-provider-nav-tab .active {
+  background-color:  #48515D;
+ 
+} 
+
+.service-provider h1 span {color:var(--green);}
+
+
+
+.services h1 {
+  font-family: helvetica_thin;
+  color: var(--white);
+  font-size: 2em;
+}
+.services p {
+  font-family: "helvetica_medium", Arial, sans-serif;;
+   color: var(--white);
+  font-size: 18px;
+}
+.services h1 span{
+  font-family: helvetica_bold;
+  color: #1FB8EF;
+ font-weight: bold;
+}
+.services .button {
+
+  padding: 5px 20px;
+}
+/*--------------------------------------------------------------
+# Partner
+--------------------------------------------------------------*/
+.Partner {
+  background-image: url("../img/partner.png");
+  height: 60vh;
+  background-size:cover;
+}
+.Partner h1 { font-size:2em;color: var(--white);
+ font-family: helvetica_thin;}
+.Partner h1 span {
+  font-family: helvetica_bold;
+  color: #1FB8EF;
+ font-weight: bold;}
+ .Partner p {color:var(--white);font-family: "helvetica_medium", Arial, sans-serif;font-size: 18px;}
+#data-table h1 {font-size:20px;}
+#login form input[type=submit] {background:var(--green);border:2px solid var(--green);color:var(--white);font-size:22px;border-radius:50px;width:200px;padding:5px 10px}
+}
+@media screen and (min-width: 1701px) {
+
+    .about{padding:60px 0;!important;height:80vh;}
+}
+@media screen and (max-width: 1700px) {
+
+    .about{padding:0;!important}
+}
+@media screen and (min-width: 768px) {
+    	#member {background-color:#1C1919;}
+#member h2 {font-size:2em;color:#1FB8EF;font-weight:bold;font-family: "helvetica_medium", Arial, sans-serif;}
+#member h5 {font-size:1.2em;font-family: helvetica}
+#member p {font-size:1.2em;font-family: helvetica}
+    #about{
+	background-repeat:no-repeat;
+	background-image:url("../img/about.png");
+	background-size:80%;
+	background-position:right bottom;
+	background-color:#272A31;
+ 
+	}
+	#about h1{font-size:5em;font-weight:bold;color:#1FB8EF;font-family: helvetica_bold;}
+	#about h3 {font-size:3em;color:var(--green);font-family: "helvetica_medium", Arial, sans-serif;}
+	#about p {font-size:1.2em;font-family: helvetica }
+    #login form input[type=submit] {background:var(--green);border:2px solid var(--green);color:var(--white);font-size:1.5em;border-radius:50px;width:200px;padding:10px 20px}
+    #data-table h1 span{color:#1FB8EF;}
+    #data-table .view-chat-btn{font-size:1.5em}
+    #data-table .submit-invest-btn{font-size:1.5em}
+      .breadcrumbs .d-flex {
+    display: block !important;
+  }
+
+  .breadcrumbs ol {
+    display: block;
+  }
+
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
+  .appointment-btn {
+    margin: 0 15px 0 0;
+    padding: 6px 18px;
+  }
+  .submit-invest-btn
+{
+  background-color:var(--blue);
+  color:white;
+  border:2px solid var(--blue);
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-family: "helvetica_medium", Arial, sans-serif;
+  font-size: 1.2em;
+  
+}
+.submit-invest-btn:hover
+{
+  background-color:var(--white);
+  color:var(--blue);
+  border:2px solid var(--blue);
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition:0.5s;
+}
+
+  .f2f-btn
+{
+  background-color:var(--purple);
+  color:white;
+  margin-right:25px;
+  border:2px solid var(--purple);
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-family: "helvetica_medium", Arial, sans-serif;
+  font-size: 1.2em;
+  
+}
+.f2f-btn:hover
+{
+  background-color:var(--white);
+  color:var(--purple);
+  border:2px solid var(--purple);
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition:0.5s;
+}
 /**
 * Appointment Button *
 */
@@ -238,14 +689,313 @@ a:hover {
   transition:0.5s;
   color: var(--green);
 }
+#hero .learn-btn
+{
+  font-family: "helvetica_medium", Arial, sans-serif;;
+  border-radius: 50px;
+  color:var(--white);
+  padding: 12px 60px;
+  font-size: 24px;
+  background-color: #1FB8EF;
+}
+#hero .learn-btn:hover
+{
+  font-family: "helvetica_medium", Arial, sans-serif;;
+  border-radius: 50px;
+  color:#1FB8EF;
+ 
+  padding: 12px 60px;
+  font-size: 24px;
+  background-color: var(--white);
+ transition: 0.5s;
+}
 
-@media (max-width: 768px) {
-  .appointment-btn {
-    margin: 0 15px 0 0;
-    padding: 6px 18px;
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about-us{background-color: #1D1919;color: var(--white);}
+.about-us .content {
+  padding: 30px;
+   border-radius: 4px;
+  color: var(--white);
+}
+
+.about-us .content h1 {
+ 
+  font-size: 4.5em;
+  margin-bottom: 30px;
+  font-family: helvetica;
+}
+.about-us .content h1 > span
+{
+ font-family: helvetica_bold; 
+   font-weight: 700;
+}
+.about-us .content p {
+  font-size: 1.7em;
+  margin-bottom: 30px;
+  font-family: helvetica;
+}
+.about-us .content .service-icon {
+   margin-bottom: 30px;
+   width: 75px;
+   text-align: center;
+   
+}
+.about-us .content .content-1
+ {
+  font-family: helvetica_bold;
+  color:#E9288A
+ }
+ .about-us .content .content-2
+ {
+  font-family: helvetica_bold;
+  color:#FC9A0A
+ }
+.content-second {
+  border-left: 2px dotted #707070;
+  border-right: 2px dotted #707070;
+}
+/*--------------------------------------------------------------
+# family meet
+--------------------------------------------------------------*/
+.family-meet{background-color: #0D0C0C;color: var(--white);}
+.family-meet .content {
+  padding: 30px;
+   border-radius: 4px;
+  color: var(--white);
+}
+
+.family-meet .content h1 {
+ 
+  font-size: 4em;
+  margin-bottom: 30px;
+  font-family: helvetica_bold;
+  font-weight:bold;
+}
+.family-meet .content h1 > span
+{
+ font-family: helvetica_thin;
+ color:var(--blue);
+}
+.family-meet .content p {
+  font-size:22px;
+  margin-bottom: 30px;
+  font-family: helvetica;
+}
+
+/*--------------------------------------------------------------
+# Family office
+--------------------------------------------------------------*/
+.family-office
+{
+  background-color: #0D0C0C;
+}
+.family-office-nav-tab
+{
+width: 50%;
+}
+.family-office-nav-tab .nav-tab
+{
+width: 100%;
+border:none;
+background-color:#2A2F35;
+border-radius: 0%;
+padding: 10px 0 10px 0;
+color: var(--white) !important;
+border:1px solid #48515D;
+border-bottom: none;
+
+font-size:18px;
+ height:100%;
+padding: 20px 30px !important;
+font-family: helvetica_bold;
+}
+.family-office-nav-tab .active {
+  background-color:  #48515D;
+  text-align: center;
+ 
+}
+.family-office h1 {color: white;font-size: 2.5em;font-weight: 700; font-family: helvetica;}
+
+.family-office h1 span {color:var(--green); font-family: helvetica_bold;}
+/* Styling for the data-table */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+	 color: var(--white);
+ border:1px solid #48515D;padding: 20px 30px !important;
+}
+
+.data-table th {
+  background-color: #48515D;
+}
+
+/* Styling for the dashboard-table */
+.dashboard-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing:0 4px;
+ 
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 10px;
+  text-align: center;
+  color:var(--white);
+}
+
+
+.dashboard-table th {
+  background: #231F20;
+  color:var(--white);
+  border:none;
+}
+
+.dashboard-table td {
+ background: #161515;
+  color:var(--white);
+   border:none;
+}
+
+.pagination
+{
+	background-color:var(--black);
+}
+
+
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
   }
 }
 
+/*--------------------------------------------------------------
+#  Service Provider
+--------------------------------------------------------------*/
+.service-provider
+{
+  background-color: #0D0C0C;
+}
+.service-provider-nav-tab
+{
+width: 25%;
+text-transform:uppercase;
+}
+.service-provider-nav-tab .nav-tab
+{
+  font-family: helvetica_bold;
+  text-transform: uppercase;
+  font-size: 18px;
+width: 100%;
+border:none;
+height:100%;
+background-color:#2A2F35;
+border-radius: 0%;
+padding: 10px 0 10px 0;
+color: var(--white) !important;
+border:1px solid #48515D;
+border-bottom: none;
+ 
+padding: 20px 30px !important;
+}
+.service-provider-nav-tab .active {
+  background-color:  #48515D;
+ 
+}
+.service-provider h1 {color: white;font-size: 50px;font-weight: 700;}
+
+.service-provider h1 span {color:var(--green);}
+
+
+.view-chat-btn {
+	background-color: var(--green); 
+	color: white;
+	padding: 10px 30px;
+	border-radius: 50px; 
+	transition: all ease-in-out 0.4s;
+	font-family: "helvetica_medium", Arial, sans-serif;;
+	border:2px solid var(--green);
+	font-size: 24px;}
+.view-chat-btn:hover {
+	border:2px solid var(--green);
+	background-color: var(--white);
+	color:var(--green);
+	transition: all ease-in-out 0.4s;
+	padding: 10px 30px;
+	border-radius: 50px; 
+	font-family: "helvetica_medium", Arial, sans-serif;;
+	font-size: 24px;}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.services {
+ height: 70vh;
+  transition: all ease-in-out 0.3s;
+}
+
+.services h1 {
+  font-family: helvetica_thin;
+  color: var(--white);
+  font-size: 4em;
+}
+.services p {
+  font-family: "helvetica_medium", Arial, sans-serif;;
+  
+  color: var(--white);
+  font-size: 30px;
+}
+.services h1 span{
+  font-family: helvetica_bold;
+  color: #1FB8EF;
+ font-weight: bold;
+}
+.services .button {
+  font-size: 1.5em;
+  padding: 10px 60px;
+}
+/*--------------------------------------------------------------
+# Partner
+--------------------------------------------------------------*/
+.Partner {
+  background-image: url("../img/partner.png");
+  height: 60vh;
+  background-size:cover;
+}
+.Partner h1 { font-size:4em;color: var(--white);
+ font-family: helvetica_thin;}
+.Partner h1 span {
+  font-family: helvetica_bold;
+  color: #1FB8EF;
+ font-weight: bold;}
+ .Partner p {color:var(--white);font-family: "helvetica_medium", Arial, sans-serif;;font-size: 18px;}
+
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -475,7 +1225,7 @@ a:hover {
   opacity: 1;
   visibility: visible;
   background: #000;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+ 
 }
 
 .navbar-mobile .dropdown ul li {
@@ -503,16 +1253,12 @@ a:hover {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  height: 90vh;
-
-}
+ 
 
 #hero {
   position: relative;
   background-color: black;
-  height: 100vh;
+  height: 90vh;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
@@ -540,7 +1286,7 @@ a:hover {
 }
 #hero p {
   font-family: helvetica;
-  font-size: 1.2em;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -551,7 +1297,7 @@ a:hover {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.6;
   z-index: 1;
 }
 
@@ -566,26 +1312,7 @@ a:hover {
 #hero .container {
   position: relative;
 }
-#hero .learn-btn
-{
-  font-family: "helvetica_medium", Arial, sans-serif;;
-  border-radius: 50px;
-  color:var(--white);
-  padding: 12px 60px;
-  font-size: 24px;
-  background-color: #1FB8EF;
-}
-#hero .learn-btn:hover
-{
-  font-family: "helvetica_medium", Arial, sans-serif;;
-  border-radius: 50px;
-  color:#1FB8EF;
- 
-  padding: 12px 60px;
-  font-size: 24px;
-  background-color: var(--white);
- transition: 0.5s;
-}
+
 #hero h1 {
   margin: 0;
   font-size: 60px;
@@ -641,7 +1368,7 @@ a:hover {
   }
 
   #hero h1 {
-    font-size: 28px;
+    font-size: 30px;
     line-height: 36px;
   }
 
@@ -758,75 +1485,7 @@ section {
   content: "/";
 }
 
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
 
-  .breadcrumbs ol {
-    display: block;
-  }
-
-  .breadcrumbs ol li {
-    display: inline-block;
-  }
-}
-
-/*--------------------------------------------------------------
-# About Us
---------------------------------------------------------------*/
-.about-us{background-color: #1D1919;color: var(--white);}
-.about-us .content {
-  padding: 30px;
-   border-radius: 4px;
-  color: var(--white);
-}
-
-.about-us .content h1 {
- 
-  font-size: 4.5em;
-  margin-bottom: 30px;
-  font-family: helvetica;
-}
-.about-us .content h1 > span
-{
- font-family: helvetica_bold; 
-   font-weight: 700;
-}
-.about-us .content p {
-  font-size: 1.7em;
-  margin-bottom: 30px;
-  font-family: helvetica;
-}
-.about-us .content .service-icon {
-   margin-bottom: 30px;
-   width: 75px;
-   text-align: center;
-   
-}
-.about-us .content .content-1
- {
-  font-family: helvetica_bold;
-  color:#E9288A
- }
- .about-us .content .content-2
- {
-  font-family: helvetica_bold;
-  color:#FC9A0A
- }
-.content-second {
-  border-left: 2px dotted #707070;
-  border-right: 2px dotted #707070;
-}
-
-@media (max-width: 767px) {  /* Adjust the max-width value as per your requirements */
- .content-second {
-    border-top: 2px dotted #707070;
-    border-bottom: 2px dotted #707070;
-	border-left: 0;
-  border-right: 0;
-  }
-}
 
  .about-us .content .content-3
  {
@@ -878,244 +1537,12 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Family office
---------------------------------------------------------------*/
-.family-office
-{
-  background-color: #0D0C0C;
-}
-.family-office-nav-tab
-{
-width: 50%;
-}
-.family-office-nav-tab .nav-tab
-{
-width: 100%;
-border:none;
-background-color:#2A2F35;
-border-radius: 0%;
-padding: 10px 0 10px 0;
-color: var(--white) !important;
-border:1px solid #48515D;
-border-bottom: none;
-text-align: left;
-font-size:18px;
- 
-padding: 20px 30px !important;
-font-family: helvetica_bold;
-}
-.family-office-nav-tab .active {
-  background-color:  #48515D;
- 
-}
-.family-office h1 {color: white;font-size: 2.5em;font-weight: 700; font-family: helvetica;}
-
-.family-office h1 span {color:var(--green); font-family: helvetica_bold;}
-/* Styling for the data-table */
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.data-table th,
-.data-table td {
-	 color: var(--white);
- border:1px solid #48515D;padding: 20px 30px !important;
-}
-
-.data-table th {
-  background-color: #48515D;
-}
-
-/* Styling for the dashboard-table */
-.dashboard-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing:0 4px;
- 
-}
-
-.dashboard-table th,
-.dashboard-table td {
-  padding: 10px;
-  text-align: center;
-  color:var(--white);
-}
-
-
-.dashboard-table th {
-  background: #231F20;
-  color:var(--white);
-  border:none;
-}
-
-.dashboard-table td {
- background: #161515;
-  color:var(--white);
-   border:none;
-}
-
-.pagination
-{
-	background-color:var(--black);
-}
-
-.submit-invest-btn
-{
-  background-color:var(--blue);
-  color:white;
-  border:2px solid var(--blue);
-  padding: 10px 30px;
-  border-radius: 50px;
-  
-}
-.submit-invest-btn:hover
-{
-  background-color:var(--white);
-  color:var(--blue);
-  border:2px solid var(--blue);
-  padding: 10px 30px;
-  border-radius: 50px;
-  transition:0.5s;
-}
-
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
-/*--------------------------------------------------------------
-#  Service Provider
---------------------------------------------------------------*/
-.service-provider
-{
-  background-color: #0D0C0C;
-}
-.service-provider-nav-tab
-{
-width: 25%;
-text-transform:uppercase;
-}
-.service-provider-nav-tab .nav-tab
-{
-  font-family: helvetica_bold;
-  text-transform: uppercase;
-  font-size: 18px;
-width: 100%;
-border:none;
-background-color:#2A2F35;
-border-radius: 0%;
-padding: 10px 0 10px 0;
-color: var(--white) !important;
-border:1px solid #48515D;
-border-bottom: none;
-text-align: left;
-padding: 20px 30px !important;
-}
-.service-provider-nav-tab .active {
-  background-color:  #48515D;
- 
-}
-.service-provider h1 {color: white;font-size: 50px;font-weight: 700;}
-
-.service-provider h1 span {color:var(--green);}
-
-.submit-invest-btn
-{
-  font-family: "helvetica_medium", Arial, sans-serif;;
-  font-size: 1.2em;
-  background-color:#1FB8EF;
-  color:white;
-  padding: 10px 30px;
-  border-radius: 50px;
-}
-.view-chat-btn {
-	background-color: var(--green); 
-	color: white;
-	padding: 10px 30px;
-	border-radius: 50px; 
-	transition: all ease-in-out 0.4s;
-	font-family: "helvetica_medium", Arial, sans-serif;;
-	border:2px solid var(--green);
-	font-size: 24px;}
-.view-chat-btn:hover {
-	border:2px solid var(--green);
-	background-color: var(--white);
-	color:var(--green);
-	transition: all ease-in-out 0.4s;
-	padding: 10px 30px;
-	border-radius: 50px; 
-	font-family: "helvetica_medium", Arial, sans-serif;;
-	font-size: 24px;}
-
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
-
-/*--------------------------------------------------------------
-# Services
---------------------------------------------------------------*/
-.services {
- height: 70vh;
-  transition: all ease-in-out 0.3s;
-}
-
-.services h1 {
-  font-family: helvetica_thin;
-  color: var(--white);
-  font-size: 4em;
-}
-.services p {
-  font-family: "helvetica_medium", Arial, sans-serif;;
-  
-  color: var(--white);
-  font-size: 30px;
-}
-.services h1 span{
-  font-family: helvetica_bold;
-  color: #1FB8EF;
- font-weight: bold;
-}
-.services .button {
-  font-size: 1.5em;
-  padding: 10px 60px;
-}
-/*--------------------------------------------------------------
-# Partner
---------------------------------------------------------------*/
-.Partner {
-  background-image: url("../img/partner.png");
-  height: 60vh;
-}
-.Partner h1 { font-size:4em;color: var(--white);
- font-family: helvetica_thin;}
-.Partner h1 span {
-  font-family: helvetica_bold;
-  color: #1FB8EF;
- font-weight: bold;}
- .Partner p {color:var(--white);font-family: "helvetica_medium", Arial, sans-serif;;font-size: 18px;}
-
-/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
   font-family: helvetica;
   
-  background: #000000;
+  background: #1D1919;
 }
 #footer a{
  
@@ -1124,7 +1551,7 @@ padding: 20px 30px !important;
 }
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #000000;
+  background: #1D1919;
  
 }
 
@@ -1208,7 +1635,7 @@ padding: 20px 30px !important;
 
 #footer .footer-newsletter form {
   margin-top: 30px;
-  background: #000000;
+  background: #1D1919;
   padding: 6px 10px;
   position: relative;
   border: 1px solid #707070;
@@ -1220,7 +1647,7 @@ padding: 20px 30px !important;
   border: 0;
   padding: 4px 8px;
   color: var(--white);
-  background-color: #000000;
+  background-color: #1D1919;
   width: calc(100% - 30px);
 }
 
@@ -1248,7 +1675,7 @@ padding: 20px 30px !important;
   
 }
 
-#footer .social-links a {
+#footer .social-links > a {
   font-size: 18px;
   display: inline-block;
   color: var(--white);
@@ -1262,36 +1689,23 @@ padding: 20px 30px !important;
   transition: 0.3s;
 }
 
-#footer .social-links a:hover {
+#footer .social-links > a:hover {
   background: #1c84e3;
   color: var(--white);
   text-decoration: none;
 }
-#about{
-	background-repeat:no-repeat;
-	background-image:url("../img/about.png");
-	background-size:contain;
-	background-position:right;
-	background-color:#272A31;
-	height:90vh;
-	}
-	#about h1{font-size:5em;font-weight:bold;color:#1FB8EF;font-family: helvetica_bold;}
-	#about h3 {font-size:3em;color:var(--green);font-family: "helvetica_medium", Arial, sans-serif;}
-	#about p {font-size:1.2em;font-family: helvetica }
-	#member {background-color:#1C1919;}
-#member h2 {font-size:2em;color:#1FB8EF;font-weight:bold;font-family: "helvetica_medium", Arial, sans-serif;}
-#member h5 {font-size:1.2em;font-family: helvetica}
-#member p {font-size:1.2em;font-family: helvetica}
+
+
 #data-table
 {background-color:#1C1919;}
-#data-table h1 span{color:#1FB8EF;}
-#data-table .submit-invest-btn{font-size:1.5em}
-#data-table .view-chat-btn{font-size:1.5em}
+
+
+
 #login {background-color:#1C1919;}
 #login form input[type=text],input[type=password] {background:#1C1919;border-radius:0;padding:15px 20px;color:var(--white)}
 #login form input[type=text],input[type=password]:hover {background:#1C1919;color:var(--white)}
-#login form input[type=submit] {background:var(--green);border:2px solid var(--green);color:var(--white);font-size:1.5em;border-radius:50px;width:200px;padding:10px 20px}
-#login form input[type=submit]:hover {background:var(--white);border:2px solid var(--green);color:var(--green);font-size:1.5em;border-radius:50px;width:200px;padding:10px 20px}
+
+#login form input[type=submit]:hover {background:var(--white);border:2px solid var(--green);color:var(--green);}
 #login form a {color:var(--white)}
 #login form a:hover {text-decoration:underline}
 #login h1{color:#1FB8EF;font-weight:bold}
@@ -1323,5 +1737,11 @@ select option  {
   padding: 15px 20px;
   font-size: 1rem;
 }
-
+.select
+{
+    background: #1C1919;
+  border-radius: 0;
+  padding: 15px 20px;
+  color: var(--white);
+}
 .main-nav{background:var(--black);color:var(--white);}

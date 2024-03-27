@@ -7,14 +7,14 @@
 
           <div class="col-lg-3 col-md-6 footer-contact">
 		  <a href="<?php echo base_url()?>">
-            <img class="img-fluid logo" src="<?php echo base_url()?>/assets/img/logo.png">
+            <img class="img-fluid logo" src="<?php echo base_url()?>/assets/img/logo.svg">
           </a>
 		  </div>
 
           <div class="col-lg-3  col-md-6 footer-links">
             <p>
-             1460 Broadway,New York <br>
-              NY 10036, USA<br>
+             1460 Broadway,<br>
+              New York, NY 10036<br>
               <strong>Email:</strong><a href="#"> support@theforcereport.com</a><br>
               <strong>Phone:</strong> <a href="#">(917) 747-6198</a><br>
               
@@ -32,10 +32,9 @@
 
           <div class="col-lg-3 col-md-6 footer-links">
             <ul>
-              <li> <a href="#">Family Office</a></li>
-              <li> <a href="<?php echo base_url('service-provider');?>">Service Providers</a></li>
+             
               <li> <a href="<?php echo base_url('sell')?>">Sell-Side</a></li>
-              <li> <a href="#">Guidelines</a></li>
+             
             </ul>
           </div>
 
@@ -47,19 +46,21 @@
 
       <div class="col-md-6 me-md-auto  mt-auto p-2 mb-3 footer-newsletter">
         <form action="" id="subscribeform" method="post">
-          <input type="email" name="email_id"><i class='fas fa-location-arrow' style='font-size:24px'></i>
+          <input type="email" name="email_id" placeholder="Email"><i class='fas fa-location-arrow' style='font-size:24px'></i>
 		</form>
 		<div class="subscribe_message"></div>
-		
-      <p>Join Our List We send only one email per quarter.</p>
+		<style>
+		.copyright:hover{color:#fff;text-decoration:underline;!important}
+		</style>
+      <p class="text-md-start text-center">Join Our List (we send one email per quarter).</p>
       </div>
       <div class="social-links text-end mt-auto p-2 mb-3">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+       <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <p>© Force Report All Rights Reserved | Website Design By Sunman</p>
+        <div><p>© Force Report All Rights Reserved | Website <a class="copyright" href="https://designbysunman.com/"> Design By Sunman</a></p></div>
       </div>
     </div>
   </footer><!-- End Footer -->

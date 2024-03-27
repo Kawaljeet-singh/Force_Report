@@ -17,11 +17,18 @@
 				<div class="col-sm-12 text-center">
 					<h1 style="color:#1FB8EF;"> Investment</h1>
 					<h3>Sell Side Portal Creation</h3>
+					<p>Our platform serves as both a dynamic marketplace and a beacon of excellence, connecting your offerings with a select group of astute investors, operators, and managers who are poised to unlock the true potential of your opportunities. With our cutting-edge tools, extensive network, and commitment to delivering high quality deals, The Force Report offers an unrivaled forum to showcase your deals, foster mutually beneficial connections, and prosperous outcomes. Join us today to illuminate your investments on a stage worthy of their importance. 
+
+We invite the sell side community to leverage our platform and showcase a wide range of investment opportunities. The Force Report takes pride in offering an exclusive and unparalleled level of visibility to Family Offices, Endowments, and Ultra High Net Worth Individuals who are actively seeking undervalued growth opportunities. 
+
+</p>
 					<p>Below please fill out your firm’s contact information for platform approval. We will be putting <br>
 					this information through a due-diligence process that may require further consideration.</p>
 				</div>
-				<form>
+				
 				<div class="row">
+				    <form>
+				        <div class="row">
 					<div class="col-sm-6 mb-4">
 						<div class="form-check p-0">
 						 <input type="text" class="form-control"  placeholder="Name of the Firm">
@@ -57,12 +64,26 @@
 						 <input type="text" class="form-control"  placeholder="Services Provided / Investment Banker">
 						  </label>
 						</div>
-					</div>	
-					<div class="col-sm-12 mb-4 text-center">
-							<input type="submit"  value="Submit" class="view-chat-btn">
-					
 					</div>
-			
+					</div>
+						</form>
+					<div class="col-sm-12 mb-4 text-center">
+					     <button id="showMessageButton" class="view-chat-btn">Submit</button>
+						 <div id="messageContainer" style="display: none;color:#5bb958; font-size:24px"></div>
+
+					</div>
+		 <script>
+        $(document).ready(function() {
+            $("#showMessageButton").click(function() {
+                // Replace this with the message you want to display
+                var message = "Thanks for submit we will update you when admin approve.";
+
+                // Show the message and hide the button
+                $("#messageContainer").text(message).show();
+                $("#showMessageButton").hide();
+            });
+        });
+    </script>
 					<div class="row text-center">
 				
 					
@@ -73,7 +94,7 @@
 					and suitable for our family office community.</p>
 					</div>
 				</div>
-				</form>
+			
 					<form  action="" name="sell_form" method="POST">
 					<div class="row">
 					<div class="col-sm-6 mb-4">
@@ -101,23 +122,24 @@
 						</div>
 					</div>	
 					<div class="col-sm-6 mb-4">
-						<div class="form-check p-0">
-						 <input type="text" class="form-control"  name="size_of_req" placeholder="Size of Requested Investment">
-						  </label>
-						</div>
-					</div>
-					<div class="col-sm-6 mb-4">
-						<div class="form-check p-0">
-						 <input type="text" class="form-control"  name="min_invt" placeholder="Minimum Investment Amount">
-						  </label>
-						</div>
-					</div>
-					<div class="col-sm-6 mb-4">
-						<div class="form-check p-0">
-						 <input type="text" class="form-control"  name="revenue" placeholder="Revenue">
-						  </label>
-						</div>
-					</div>
+                               <div class="input-group ">
+                                  <span class="input-group-text dd">$</span>
+                                   <input type="text" class="form-control dd"  name="size_of_req" placeholder="Size of Requested Investment">
+                                </div>
+                           </div>
+				 	<div class="col-sm-6 mb-4">
+                               <div class="input-group ">
+                                  <span class="input-group-text dd">$</span>
+                                   <input type="text" class="form-control dd"  name="min_invt" placeholder="Minimum Investment Amount">
+                                </div>
+                           </div>
+                           <div class="col-sm-6 mb-4">
+                               <div class="input-group ">
+                                  <span class="input-group-text dd">$</span>
+                                   <input type="text" class="form-control dd"  name="revenue" placeholder="Revenue">
+                                </div>
+                           </div>
+				 
 					<div class="col-sm-6 mb-4">
 						<div class="form-check p-0">
 						 <input type="text" class="form-control"  name="ebitd" placeholder="EBITDA">
@@ -125,29 +147,33 @@
 						</div>
 					</div>	
 					<div class="col-sm-6 mb-4">
-						<div class="form-check p-0">
-						 <input type="text" class="form-control"  name="enter_val" placeholder="Enterprise Value">
-						  </label>
-						</div>
-					</div>
-					<div class="col-sm-6 mb-4">
-						<div class="form-check p-0">
-						 <input type="text" class="form-control"  name="total_debt" placeholder="Total Debt">
-						  </label>
-						</div>
-					</div>	
-					<div class="col-sm-6 mb-4">
-						<div class="form-check p-0">
-						 <input type="text" class="form-control"  name="total_fund_date" placeholder="Total Funding to Date">
-						  </label>
-						</div>
-					</div>
-					<div class="col-sm-6 mb-4">
-						<div class="form-check p-0">
-						 <input type="text" class="form-control"  name="valuation" placeholder="Valuation">
-						  </label>
-						</div>
-					</div>
+                               <div class="input-group ">
+                                  <span class="input-group-text dd">$</span>
+                                   <input type="text" class="form-control dd"  name="enter_val" placeholder="Enterprise Value">
+                                </div>
+                           </div>
+				 
+						<div class="col-sm-6 mb-4">
+                               <div class="input-group  ">
+                                  <span class="input-group-text dd">$</span>
+                                  <input type="text" class="form-control dd"  name="total_debt" placeholder="Total Debt">
+                                </div>
+                              
+                           </div>
+				 	<div class="col-sm-6 mb-4">
+                               <div class="input-group  ">
+                                  <span class="input-group-text dd">$</span>
+                                   <input type="text" class="form-control dd"  name="total_fund_date" placeholder="Total Funding to Date">
+                                </div>
+                              
+                           </div>
+				 	<div class="col-sm-6 mb-4">
+                               <div class="input-group ">
+                                  <span class="input-group-text dd">$</span>
+                                    <input type="text" class="form-control dd"  name="valuation" placeholder="Valuation">
+                                </div>
+                           </div>
+					 
 					<div class="col-sm-6 mb-4">
 						<div class="form-check p-0">
 						 <select name="stage_of_invest">
@@ -219,7 +245,7 @@
 					</div>		
 						<div class="col-sm-12 mt-5 text-center">
 					
-					 <img class="img-fluid" src="<?php echo base_url()?>/assets/img/company.png">
+					 <img class="img-fluid d-none" src="<?php echo base_url()?>/assets/img/company.png">
 					</div>
 					</div>
 					</form>
@@ -255,22 +281,22 @@ $(function() {
     },
     // Specify validation error messages
     messages: {
-      company_name: "Company Name can't be blank",
-      company_financials: "Company Financials can't be blank",
+      company_name: "Required Field",
+      company_financials: "Required Field",
         size_of_req: {
-        required: "Size of investment can't be blank",
+        required: "Required Field",
         digits: "Please enter only digits"
       },
 	   min_invt: {
-        required: "Enter Minimum investment",
+        required: "Required Field",
         digits: "Please enter only digits"
       },
 	   revenue: {
-        required: "enter revenue",
+        required: "Required Field",
         digits: "Please enter only digits"
       },
 	   enter_val: {
-        required: "Enter Value",
+        required: "Required Field",
         digits: "Please enter only digits"
       },
       // Add more error messages for other fields as needed

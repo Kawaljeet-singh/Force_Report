@@ -6,19 +6,21 @@
   <?php $this->load->view("layout/header")?>
 
   <!-- ======= Hero Section ======= -->
-  <section id="about" class="about d-flex align-items-center">
+  <section id="about" class="about align-items-center" >
     <div class="container-fluid" >
          <!-- The header content -->
-        <div class="container h-100">
+        <div class="container margin-top">
           <div class="row">
             <div class="col-sm-5">
               <h1><span>About</span></h1>
-              <p class="mt-5 mb-5 ">Force brings Family Offices together to share intellectual capital and best practices across all areas of their operation. We provide them with a platform to help spread the word about their charities and philanthropic work. We also introduce them to best-in-class service providers.
+              <p class="my-4 ">FORCE brings Family Offices together to share investment opportunities, intellectual capital, and best practices across all areas of their operations. Additionally, we provide them with a platform to help amplify the value proposition of their charities and philanthropies. FORCE also introduces best-in-class service providers to help new family offices establish themselves. Our ultimate goal is to bring Family Offices together in the context of co-investing by sharing investment opportunities in what we believe are innovative private and public companies.
 
-Our ultimate goal is to bring Family Offices together in the context of co-investing by sharing investment opportunities in what we believe are innovative and public and private companies with bright futures ahead.</p>
+</p>
 				<h3>History</h3>
-			 <p>The FORCE Family Office team has a combined 50+ years in the family office space. The team has helped family offices find co-investment relationships, unique deal flow, share intellectual capital, identify exit strategies and meet best in class service providers.</p>
+			 <p>The FORCE Family Office team has a combined 75+ years in the family office space. The team has helped family offices find co-investment relationships and unique deal flow, helped them share intellectual capital and identify exit strategies, and also meet best in class service providers.</p>
             </div>
+            
+            <img class="d-md-none" src="<?php echo base_url('assets/img/about.png')?>">
           </div>
       </div>
     </div>
@@ -41,7 +43,7 @@ Our ultimate goal is to bring Family Offices together in the context of co-inves
 Since 2012, Mr. Saltzstein has made over $1.7B in co-investment introductions to Family Offices.  Mr. Saltzstein is an experienced partner with a demonstrated history of working in the financial services industry. Skilled in corporate development, capital raising, mergers & acquisitions, start-ups, marketing, and corporate finance, Mr. Saltzstein prides himself on being a generalist.  Mr. Saltzstein has orchestrated investments in healthcare, (medical device, biotech, pharma and therapeutics), technology, social media, precious metals, oil and gas, alternative energy, cryptocurrency, blockchain and other sectors.</p>
 				</div>
 			</div>
-			<div class="row mt-5">
+			<div class="row mt-5 d-none">
 				<div class="col-sm-12 col-md-4 my-auto">
 					<img class="img-fluid" src="<?php echo base_url()?>/assets/img/member1.png">
 				</div>

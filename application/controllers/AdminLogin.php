@@ -13,9 +13,25 @@ class AdminLogin extends CI_Controller
     }
     public function index()
     {
-        $this->load->view('login');
+       $data=array();
+        $data['id']=1;
+        $this->load->view('login',$data);
     }
-    public function admin_login_check()
+    public function login($s)
+    {
+        $data=array();
+        $data['id']=$s;
+        if ($s == 0)
+        {
+             $data['note']="<h2>Login Required to Submit Sell Side Form</h2> 
+             <p>Our platform serves as both a dynamic marketplace and a beacon of excellence, connecting your offerings with a select group of astute investors, operators, and managers who are poised to unlock the true potential of your opportunities. With our cutting-edge tools, extensive network, and commitment to delivering high quality deals, The Force Report offers an unrivaled forum to showcase your deals, foster mutually beneficial connections, and prosperous outcomes. Join us today to illuminate your investments on a stage worthy of their importance. 
+
+We invite the sell side community to leverage our platform and showcase a wide range of investment opportunities. The Force Report takes pride in offering an exclusive and unparalleled level of visibility to Family Offices, Endowments, and Ultra High Net Worth Individuals who are actively seeking undervalued growth opportunities. 
+</p>";
+        }
+        $this->load->view('login',$data);
+    }
+    public function admin_login_check($s)
     {
 
         $this->form_validation->set_rules('user_email', 'User Email', 'required|valid_email');
@@ -27,7 +43,7 @@ class AdminLogin extends CI_Controller
             $data['password'] = md5($this->input->post('user_password'));
             $result = $this->adminlogin_model->admin_login_check($data);
 			if ($result) {
-				if($result->user_status == 0)
+				if($result->user_status == '0' || $result->user_status == '2')
 					{
 						 $this->session->set_flashdata('message', 'User is not approved yet.');
 						redirect('login');
@@ -35,8 +51,14 @@ class AdminLogin extends CI_Controller
 					else
 					   {
 						$this->session->set_userdata('user_detail', $result);
-						redirect('dashboard');
+						if($s == 0)
+						{
+						redirect('sell');
 						}
+						else{
+						redirect('dashboard?id='.$s);
+						}
+					   }
             } else {
                 $this->session->set_flashdata('message', 'Your Email Or Password Does Not Match');
                 redirect('login');
@@ -51,7 +73,7 @@ class AdminLogin extends CI_Controller
     {
         $user_detail    = $this->session->userdata('user_detail');
         if ($user_detail == true) {
-            redirect('dashboard');
+            	redirect('dashboard?id=3');
         }
 		
     }

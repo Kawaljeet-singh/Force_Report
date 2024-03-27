@@ -59,30 +59,36 @@ function locationInfo() {
         });
     };
 
-    this.getStates = function(id) {
-        jQuery(".states option:gt(0)").remove();
-        jQuery(".cities option:gt(0)").remove();
-        //get additional fields
-        var stateClasses = jQuery('#stateId').attr('class');
+   this.getStates = function(id) {
+    jQuery(".states option:gt(0)").remove();
+    jQuery(".cities option:gt(0)").remove();
 
-        
-        var url = rootUrl+'?type=getStates&countryId=' + id;
-        var method = "post";
-        var data = {};
-        jQuery('.states').find("option:eq(0)").html("Please wait..");
-        call.send(data, url, method, function(data) {
-            jQuery('.states').find("option:eq(0)").html("Select State");
-            
-                jQuery.each(data['result'], function(key, val) {
-                    var option = jQuery('<option />');
-                    option.attr('value', val.name).text(val.name);
-                    option.attr('stateid', val.id);
-                    jQuery('.states').append(option);
-                });
-                jQuery(".states").prop("disabled",false);
-            
+    // Get additional fields
+    var stateClasses = jQuery('#stateId').attr('class');
+    var url = rootUrl + '?type=getStates&countryId=' + id;
+    var method = "post";
+    var data = {};
+    jQuery('.states').find("option:eq(0)").html("Please wait..");
+
+    call.send(data, url, method, function(data) {
+        jQuery('.states').find("option:eq(0)").html("Select State");
+
+        // Sort the states alphabetically
+        data['result'].sort(function(a, b) {
+            return a.name.localeCompare(b.name);
         });
-    };
+
+        jQuery.each(data['result'], function(key, val) {
+            var option = jQuery('<option />');
+            option.attr('value', val.name).text(val.name);
+            option.attr('stateid', val.id);
+            jQuery('.states').append(option);
+        });
+
+        jQuery(".states").prop("disabled", false);
+    });
+};
+
 
     this.getCountries = function() {
         var url = rootUrl+'?type=getCountries';

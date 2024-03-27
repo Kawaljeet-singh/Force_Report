@@ -2,9 +2,12 @@
   
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
+                  
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 m-3 mt-5"><?php echo $title?></h1>
-                   </div>
+                        
+                        <a href="<?php echo base_url('export_list')?>" class="submit-invest-btn">Export list</a>
+                    </div>
                     <!-- DataTales Example -->
                     <div class="data-table ">
                         
@@ -31,7 +34,9 @@
                             </div>
                         </div>
                     </div>
-                   
+                   <a class="submit-invest-btn" href="#" data-toggle="modal" data-target="#sendmsg">
+                                    
+                    <span>send Email</span></a>
                 </div>
                 <!-- /.container-fluid -->
 

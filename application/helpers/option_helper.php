@@ -5,7 +5,7 @@ if (!function_exists('getInvestSectorName')) {
         $CI =& get_instance();
         $CI->db->select('inv_sector');
         $CI->db->from('investment_sector');
-        $CI->db->where('inv_key', $id);
+        $CI->db->where('inv_id', $id);
         $result = $CI->db->get()->row();
 
         if ($result) {
@@ -29,6 +29,25 @@ if (!function_exists('getInvestorName')) {
     }
 }
 
+// application/helpers/custom_helper.php
+
+if (!function_exists('auto_format_amount')) {
+    function auto_format_amount($amount) {
+        // Convert the amount to a string
+        $amount_str = (string) $amount;
+
+        // Split the amount into integer and decimal parts
+        $parts = explode('.', $amount_str);
+
+        // Format the integer part with commas
+        $formatted_integer = number_format($parts[0]);
+
+        // If there is a decimal part, append it to the formatted integer
+        $formatted_amount = isset($parts[1]) ? $formatted_integer . '.' . $parts[1] : $formatted_integer;
+
+        return $formatted_amount;
+    }
+}
 
 if (!function_exists('getcategory')) {
     function getcategory($id)
@@ -99,4 +118,21 @@ if (!function_exists('checkInvestment')) {
 	    
 	}
 }
+if (!function_exists('Investmentuser')) {
+    function Investmentuser($userid)
+    {
+        $CI =& get_instance();
+        $CI->db->where(array('inv_user_id' => $userid ,'inv_user_sectype' => '1') );
+        $CI->db->from('investment_user');
+        $results = $CI->db->get()->result();
+
+        $sectorIds = array();
+        foreach ($results as $result) {
+            $sectorIds[] = $result->inv_user_sectorId;
+        }
+
+        return $sectorIds;
+    }
+}
+
 ?>

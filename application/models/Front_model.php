@@ -62,13 +62,17 @@
 					$this->db->from('user_login');
 					$this->db->join('service_provider', 'service_provider.user_uid = user_login.user_id');
 					$this->db->where(array('user_login.user_status'=>'1', 'service_provider.category'=>$id));
+					$this->db->group_by('user_login.user_email'); // Add this line for GROUP BY
+
 				return $this->db->get()->result();
 	}
 	public function table_data($a)
 	{
 	            	$this->db->select('*');
 					$this->db->from('user_login');
-						$this->db->where(array('user_status'=>'1', 'sf'=>$a));
+					$this->db->group_by('user_login.user_email'); // Add this line for GROUP BY
+
+				    $this->db->where(array('user_status'=>'1', 'sf'=>$a));
 				return $this->db->get()->result();
 	    
 	 

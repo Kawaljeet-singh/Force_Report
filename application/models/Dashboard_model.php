@@ -60,9 +60,18 @@
 	{
 					$this->db->select('*');
 					$this->db->from('contact_user');
-					$this->db->join('sell_form', 'sell_form.inv_user_id = contact_user.cont_reciver');
+					$this->db->join('sell_form', 'sell_form.inve_user_id = contact_user.cont_reciver');
 					$this->db->where('contact_user.cont_sender',$this->user_detail->user_key );
 					$this->db->group_by('sell_form.sell_id');
+				return $this->db->get()->result();
+	}
+		public function green_lights()
+	{
+					$this->db->select('*');
+					$this->db->from('contact_user');
+					$this->db->join('user_login', 'user_login.user_Key = contact_user.cont_reciver');
+					$this->db->where('contact_user.cont_sender',$this->user_detail->user_key );
+					$this->db->group_by('user_login.user_key');
 				return $this->db->get()->result();
 	}
 	public function get_register_fo($id,$status)
@@ -92,11 +101,11 @@
 					$this->db->where('inv_user_id', $id);
 					$invest = $this->db->get('investment_user')->result();
 					$list = array(); // Initialize the $list array
-			foreach ($invest as $investment) {
+			    foreach ($invest as $investment) {
 				$this->db->where('inv_user_sectorId', $investment->inv_user_sectorId);
 				$coinvest = $this->db->get('investment_user')->result();
 				foreach ($coinvest as $sellFormEntry) {
-						// Check if the sell_id already exists in the $list array
+					
 						if (!in_array($sellFormEntry->inv_secId, array_column($list, 'inv_secId'))) {
 							$list[] = $sellFormEntry;
 						}
@@ -167,6 +176,11 @@
 	public function get_user_detail($id)
 	{
 			$this->db->where('user_key',$id);
+			return $this->db->get('user_login')->row();
+	}
+		public function get_user_detailbyid($id)
+	{
+			$this->db->where('user_id',$id);
 			return $this->db->get('user_login')->row();
 	}
 	public function isEmailExists($email) {

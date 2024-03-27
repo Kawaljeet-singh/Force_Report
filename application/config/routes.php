@@ -51,7 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'Home';
 $route['404_override'] = '';
+
 $route['about'] = 'Home/about';
+$route['login/(:any)'] = 'AdminLogin/login/$1';
 $route['login'] = 'AdminLogin';
 $route['register'] = 'Home/register';
 $route['register_submit'] = 'Home/register_submit';
@@ -61,10 +63,22 @@ $route['family_office/(:any)'] = 'Home/data_page/$1';
 $route['size_of_investment/(:any)'] = 'Home/size_invest/$1';
 $route['number_of_investment/(:any)'] = 'Home/no_invest/$1';
 $route['service/(:any)'] = 'Home/data_page/$1';
+$route['firmdata/(:any)'] = 'Home/firmdata/$1';
+$route['contact_us'] = 'Home/contact';
+$route['submit_contact'] = 'Home/submit_contact';
 $route['emailchk'] = 'Home/emailchk';
 $route['dashboard'] = 'Dashboard/dashboard';
-$route['sell'] = 'Dashboard/sell';
+$route['sell'] = 'Sell_form/sell';
 $route['sell_form'] = 'Dashboard/sell_form';
+$route['export_list'] = 'Dashboard/export_list';
+$route['sendEmails'] = 'Dashboard/sendEmails';
+
+$route['ForgotPassword'] = 'ForgotPassword/index';
+$route['send_reset_link'] = 'ForgotPassword/send_reset_link';
+
+$route['Reset_Password/(:any)'] = 'Reset_Password/index/$1';
+$route['resetpassword'] = 'Reset_Password/resetpassword';
+
 
 $route['family_office_list'] = 'Family_office/index';
 $route['fo_registed'] = 'Family_office/fo_registed';
@@ -130,5 +144,5 @@ $route['update_password'] = 'Dashboard/update_password';
 
 $route['logout'] = 'Dashboard/logout';
 $route['contact_user'] = 'Dashboard/contact_user';
-$route['admin_login_check'] = 'AdminLogin/admin_login_check';
+$route['admin_login_check/(:any)'] = 'AdminLogin/admin_login_check/$1'; 
 $route['translate_uri_dashes'] = FALSE;

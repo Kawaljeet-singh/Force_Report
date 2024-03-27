@@ -13,13 +13,21 @@
     <section id="login" class="data-table">
       <div class="container">
 			<div class="row justify-content-center">
-				<div class="col-sm-12 text-center">
-					<h1>Login In to Your Account</h1>
+				<div class="col-sm-10 text-center">
+				    <?php if(isset($note)){echo $note;}?>
+					<h1>Login to Your Account</h1>
 					<p>Enter your Force Report username and password</p>
 					<?php echo $this->session->flashdata('message');?>
 				</div>
 				<div class="col-sm-4 mt-2 text-center ">
-					<form class="row" action="<?php echo base_url('admin_login_check')?>" method="post">
+				    <?php 
+				    $i=0;
+				    if ($id != '')
+				    {
+				        $i=$id;
+				    }
+				    ?>
+					<form class="row" action="<?php echo base_url('admin_login_check/'.$i)?>" method="post">
 					  <div class="mb-3">
 					  <input type="text" class="form-control" name="user_email"  placeholder="Enter email id">
 					</div>
@@ -31,9 +39,16 @@
 					  <input type="submit"  value="Login">
 					</div>
 					<div class="mb-3">
-					  <a href="#">Forgot password?</a>	
+					  <a href="<?php echo base_url('ForgotPassword')?>">Forgot password?</a>	
 					</div>
+					<div class=" mb-3">
+					  OR
+					</div>
+				
 					</form>
+						<div class="col-12">
+					    <a href="<?php echo base_url('register');?>" class="submit-invest-btn scrollto "><span class="d-none d-md-inline">Register</span></a>
+					    </div>
 				</div>
 			</div>
       </div>

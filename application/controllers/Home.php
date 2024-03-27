@@ -9,7 +9,6 @@ class Home extends CI_Controller {
         $this->get_user();
 		$this->user_detail    = $this->session->userdata('user_detail');
     }
-	
 	public function index()
 	{
 	    $data['law_firm']=$this->Front_model->firm_data('c017d6ec-f8ad-11ed-9f7d-3c7c3f5b04d2');
@@ -20,7 +19,7 @@ class Home extends CI_Controller {
 	  	$data['mfo']=$this->Front_model->table_data('a2e13801-f8ad-11ed-9f7d-3c7c3f5b04d2');
 	    
 		$this->load->view('Home',$data);
-	}
+	} 
 	public function about()
 	{
 		$this->load->view('about');
@@ -50,15 +49,50 @@ class Home extends CI_Controller {
         $data['user_last_name'] = $this->input->post('l_name');
         $data['user_email'] = $this->input->post('email');
         $data['user_phone'] = $this->input->post('phone');
-        $data['user_family_office'] = $this->input->post('family_office');
+        
+        if (isset($_POST['family_office'])) {
+            $data['user_family_office'] = $this->input->post('family_office');
+        } else {
+           $data['user_family_office'] ='';
+        }
+        if (isset($_POST['sf'])) {
+            $data['sf'] = $this->input->post('sf');
+          
+        } else {
+           $data['sf'] = '';
+        }
+
+        if (isset($_POST['amount'])) {
+           $data['amount'] =$this->input->post('amount');
+          
+        } else {
+          $data['amount'] ='';
+        }
+        
+         if (isset($_POST['sizeby'])) {
+            $data['sizeby'] =$this->input->post('sizeby');
+          
+        } else {
+          $data['sizeby'] ='';
+        }
+        
+        
         $data['user_firm_name'] = $this->input->post('firm_name');
         $data['password'] = md5($this->input->post('password'));
-        $data['sf'] =$this->input->post('sf');
+        
         $data['country'] =$this->input->post('country');
         $data['state'] =$this->input->post('state');
         $data['city'] =$this->input->post('city');
-        $data['amount'] =$this->input->post('amount');
-         $data['sizeby'] =$this->input->post('sizeby');
+          
+       
+ if (isset($_POST['anonymous'])) {
+           $data['anonymous'] =$this->input->post('anonymous');
+          
+        } 
+        else
+        {
+             $data['anonymous'] ='0';
+        }
         $invest_sector = $this->input->post('sector_id');
         $invest_stage = $this->input->post('invest_stage');
         $invest_structure = $this->input->post('invest_structure');
@@ -200,6 +234,18 @@ class Home extends CI_Controller {
         echo json_encode($response);
 		
 	}
+		public function firmdata($id)
+	{
+			$this->db->select('*');
+			$this->db->from('data_table');
+			$this->db->where('uuid', $id);
+			$result = $this->db->get()->row();
+			$data['title_one']=$result->page_title;
+			$data['title_two']=$result->page_name;
+			$dat['data']=$data;
+			$dat['sf']=$this->Front_model->firm_data($id);
+			$this->load->view('data_page',$dat);
+	}
 		public function data_page($id)
 	{
 			$this->db->select('*');
@@ -240,7 +286,15 @@ class Home extends CI_Controller {
     {
 		$user_detail = $this->session->userdata('user_detail');
     }
-	
+		public function contact()
+    {
+	$this->load->view('contact_us');
+    }
+    
+	 public function submit_contact() {
+        $response = array('message' => 'Success');
+        echo json_encode($response);
+    }
 	public function subscribe() {
 		
 		$email = $this->input->post('email_id');

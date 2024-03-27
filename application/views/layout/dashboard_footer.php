@@ -40,7 +40,33 @@
             </div>
         </div>
     </div>
-
+ <div class="modal fade" id="sendmsg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog border" role="document">
+            <div class="modal-content main-nav">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Send Message to subscribers</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                 <form class="row justify-content-center" action="<?php echo base_url('sendEmails')?>" method="POST">
+                     <div class="col-6">
+                     <div class="mb-3">
+					  <input type="text" class="form-control" name="title"  placeholder="Title">
+					</div>
+					<div class="mb-3">
+					   <textarea name="message" placeholder="Message"></textarea>
+					</div>
+					<div class="mb-3">
+					  <input type="submit" class="approve-btn" value="Login">
+					</div>
+					</div>
+                 </form>
+                
+            </div>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo base_url()?>vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url()?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
